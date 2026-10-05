@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Samwol Samil 디지털 명함</title>
+<meta name="description" content="삼월삼일 웨딩 스냅 작가 송인탁의 디지털 명함이에요.">
+<meta property="og:title" content="Samwol Samil 디지털 명함">
+<meta property="og:description" content="삼월삼일 웨딩 스냅 작가 송인탁의 디지털 명함이에요.">
+<meta property="og:url" content="https://samwolsamil.com/card/">
+<meta property="og:type" content="website">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<style>
+html{color-scheme:light}
+:root{--paper:#F1ECE4;--white:#FAF8F4;--walnut:#332C28;--oak:#8D7C6B;--terracotta:#947164;--line:rgba(51,44,40,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#E6DED2;color:var(--walnut);font-family:'Pretendard','Noto Sans KR',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;min-height:100%;display:flex;justify-content:center}
+.card{width:100%;max-width:420px;min-height:100dvh;background:var(--paper);display:flex;flex-direction:column}
+.jost{font-family:'Jost',sans-serif;font-weight:400;font-style:normal;font-synthesis:none;text-transform:uppercase}
+.wm{letter-spacing:.24em;padding-left:.24em}
+.wm .gap{letter-spacing:.64em} /* Samwol과 Samil 사이를 조금 더 띄워요 */
+
+.top{background:var(--walnut);color:var(--paper);padding:64px 28px 56px;text-align:center;position:relative;overflow:hidden}
+.top::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 80% 0%,rgba(148,113,100,.35),transparent 60%);pointer-events:none}
+.logo{width:104px;height:104px;border-radius:50%;border:1px solid rgba(241,236,228,.35);display:flex;align-items:center;justify-content:center;margin:0 auto 26px;font-size:8px;line-height:2.1;animation:fade 1.2s ease both}
+.top .wm{font-size:14px;animation:fade 1.2s ease .2s both}
+.top .ko{font-size:11px;letter-spacing:.3em;padding-left:.3em;margin-top:8px;opacity:.7;animation:fade 1.2s ease .3s both}
+.top .slogan{font-size:12px;margin-top:14px;opacity:.8;animation:fade 1.2s ease .4s both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.who{padding:36px 28px 8px;text-align:center}
+.who .name{font-size:16px;font-weight:400}
+.who .role{font-size:9.5px;letter-spacing:.3em;color:var(--oak);margin-top:6px}
+.who .desc{font-size:12px;line-height:1.85;margin-top:18px;opacity:.85}
+
+.links{padding:24px 24px 8px;display:flex;flex-direction:column;gap:10px}
+.links a,.links button{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;background:var(--white);border:1px solid var(--line);color:var(--walnut);text-decoration:none;font-family:inherit;font-size:13px;font-weight:400;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.links a:hover,.links button:hover{background:var(--walnut);color:var(--paper);transform:translateY(-1px)}
+.links a.main{background:var(--walnut);color:var(--paper)}
+.links a.main:hover{background:var(--terracotta)}
+.links .k{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;opacity:.6}
+.links svg{width:16px;height:16px}
+
+.service{margin:26px 24px 0;border-top:1px solid var(--line);padding-top:24px}
+.service div{padding:22px 20px;background:var(--white);border:1px solid var(--line);text-align:center}
+.service b{display:block;font-family:'Jost',sans-serif;font-weight:400;font-size:10px;letter-spacing:.28em;color:var(--oak);margin-bottom:10px}
+.service p{font-size:12.5px;line-height:1.85}
+.service small{display:block;margin-top:12px;font-size:11px;color:var(--oak);letter-spacing:.02em}
+
+.qrwrap{margin:26px 24px 0;text-align:center}
+.qrbtn{background:none;border:none;font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.28em;color:var(--oak);cursor:pointer;padding:8px}
+.qrbox{display:none;margin-top:12px;background:var(--white);border:1px solid var(--line);padding:22px}
+.qrbox.on{display:block;animation:fade .5s ease}
+.qrbox svg{width:180px;height:180px}
+.qrbox p{font-size:11.5px;margin-top:10px;opacity:.7}
+
+footer{margin-top:auto;padding:44px 24px 36px;text-align:center;font-size:10px;letter-spacing:.35em;color:var(--oak)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--walnut);color:var(--paper);font-size:12px;padding:9px 18px;opacity:0;transition:.3s;pointer-events:none}
+.toast.on{opacity:1}
+.contact{margin:6px 24px 0;padding:14px 18px;background:var(--white);border:1px solid var(--line);font-size:12.5px;line-height:1.9;display:grid;grid-template-columns:auto 1fr;column-gap:14px}
+.contact span{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;color:var(--oak);align-self:center}
+.contact em{font-style:normal;font-variant-numeric:tabular-nums;user-select:all;word-break:break-all}
+button:focus-visible,a:focus-visible{outline:2px solid var(--terracotta);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="card">
+  <div class="top">
+    <div class="logo"><svg viewBox="0 0 100 100" width="100%" height="100%" aria-label="Samwol Samil"><g fill="#F1ECE4" font-family="Jost, sans-serif" font-weight="700" font-size="7.4" letter-spacing="1.776" text-anchor="middle"><text x="50.89" y="52.59">Samwo<tspan letter-spacing="4.74">l</tspan>Samil</text></g></svg></div>
+    <div class="jost wm" style="text-transform:none" aria-label="Samwol Samil">Samwo<span class="gap">l</span>Samil</div>
+    <div class="ko">삼월삼일</div>
+    <div class="slogan" id="slogan"></div>
+  </div>
+
+  <div class="who">
+    <div class="name" id="name"></div>
+    <div class="role jost" id="role"></div>
+    <div class="desc">시간이 흐를수록 온기를 더해갈,<br>두 사람만의 아카이브.</div>
+  </div>
+
+  <div class="links" id="links"></div>
+  <div class="contact" id="contact"></div>
+
+  <div class="service">
+    <div><b>WEDDING SNAP</b><p>오후의 빛이 드는 창가와 바람이 머무는 야외에서,<br>두 분이 가장 두 분다운 순간을 기다려 담아요.</p><small>야외 · 렌탈 스튜디오 웨딩 스냅<br>서울에서 활동하고, 두 분이 원하는 곳 어디든 찾아가요</small></div>
+  </div>
+
+  <div class="qrwrap">
+    <button class="qrbtn" id="qrBtn" type="button" aria-expanded="true">HIDE QR</button>
+    <div class="qrbox on" id="qrBox"><div id="qr"></div><p id="qrNote">상대방 휴대폰 카메라로 스캔하면 인스타그램이 열려요.</p></div>
+  </div>
+
+  <footer>SEOUL · WEDDING ARCHIVE</footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ── 여기 정보만 바꾸면 명함 전체에 반영돼요 ── */
+const P={
+  name:'SONG IN TAK',
+  role:'Photographer',
+  slogan:'오래 곁에 두고 싶은 날을 기록합니다.',
+  phone:'+82 10 9963 4551',
+  email:'hello@samwolsamil.com',   // 이메일은 아직 미정(새 도메인 확인 후 확정)
+  instagram:'samwolsamil',
+  kakao:'',        // 카카오톡 채널 주소 (예: https://pf.kakao.com/_xxxx). 비워두면 버튼이 숨겨져요.
+  booking:'https://samwolsamil.com/',      // 촬영 안내 페이지(가격·진행)
+  cardUrl:'https://samwolsamil.com/card/'       // QR을 찍으면 이 명함이 열려요
+};
+
+const $=id=>document.getElementById(id),toast=$('toast');
+const msg=t=>{toast.textContent=t;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),1600)};
+$('name').textContent=P.name;$('role').textContent=P.role;$('slogan').textContent=P.slogan;
+
+const I={
+  arrow:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12L12 4M6 4h6v6"/></svg>',
+  plus:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 3v10M3 8h10"/></svg>'
+};
+const links=[
+  {t:'인스타그램',k:'INSTAGRAM',h:`https://www.instagram.com/${P.instagram}/`,main:true},
+  P.booking&&{t:'촬영 안내 · 가격',k:'GUIDE',h:P.booking},
+  P.kakao&&{t:'카카오톡 상담',k:'KAKAO',h:P.kakao},
+  {t:'전화하기',k:'CALL',h:`tel:${P.phone.replace(/[^0-9+]/g,'')}`},
+  {t:'이메일 보내기',k:'EMAIL',h:`mailto:${P.email}`}
+].filter(Boolean);
+$('links').innerHTML=links.map(l=>`<a href="${l.h}" target="_blank" rel="noopener" class="${l.main?'main':''}"><span>${l.t}</span><span class="k">${l.k} ${I.arrow}</span></a>`).join('')
+ +`<button id="vcf" type="button"><span>연락처 복사</span><span class="k">COPY ${I.plus}</span></button>`;
+$('contact').innerHTML=`<span>TEL</span><em>${P.phone}</em><span>MAIL</span><em>${P.email}</em>`;
+
+/* vCard */
+$('vcf').onclick=async()=>{
+  const t=`Samwol Samil 삼월삼일 ${P.name} (${P.role})\n${P.phone}\n${P.email}\nhttps://www.instagram.com/${P.instagram}/`;
+  try{await navigator.clipboard.writeText(t);msg('연락처를 복사했어요')}
+  catch(e){const sel=getSelection(),rg=document.createRange();rg.selectNodeContents($('contact'));sel.removeAllRanges();sel.addRange(rg);msg('선택한 연락처를 복사해 주세요')}
+};
+
+/* QR */
+if(P.cardUrl)$('qrNote').textContent='상대방 휴대폰 카메라로 스캔하면 이 명함이 열려요.';
+function drawQR(){
+  const url=P.cardUrl||`https://www.instagram.com/${P.instagram}/`;
+  if(typeof qrcode==='undefined'){$('qr').textContent=url;return}
+  const q=qrcode(0,'M');q.addData(url);q.make();const n=q.getModuleCount();let d='';
+  for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(q.isDark(r,c))d+=`M${c} ${r}h1v1h-1z`;
+  $('qr').innerHTML=`<svg viewBox="-2 -2 ${n+4} ${n+4}" shape-rendering="crispEdges"><rect x="-2" y="-2" width="${n+4}" height="${n+4}" fill="#FAF8F4"/><path d="${d}" fill="#332C28"/></svg>`;
+}
+$('qrBtn').onclick=()=>{const b=$('qrBox'),on=b.classList.toggle('on');$('qrBtn').textContent=on?'HIDE QR':'SHOW QR';$('qrBtn').setAttribute('aria-expanded',on);if(on)drawQR()};
+/* QR은 처음부터 펼쳐 둬요(10/2). qrcode 스크립트가 늦게 오면 로드 후 다시 그려요 */
+drawQR();if(typeof qrcode==='undefined')window.addEventListener('load',drawQR);
+</script>
+</body>
+</html>

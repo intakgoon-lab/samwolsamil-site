@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>삼월삼일 촬영 안내</title>
+<meta name="description" content="삼월삼일 웨딩 스냅·본식 스냅의 구성, 가격, 출장비, 진행 순서를 한곳에 모았어요.">
+<meta property="og:title" content="삼월삼일 촬영 안내">
+<meta property="og:description" content="삼월삼일 웨딩 스냅·본식 스냅의 구성, 가격, 출장비, 진행 순서를 한곳에 모았어요.">
+<meta property="og:url" content="https://samwolsamil.com/">
+<meta property="og:type" content="website">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap">
+<style>
+/* Layout: one narrow phone-first column of paper sheets — wordmark header, inquiry buttons, products, retouch split, travel fees, delivery timeline, booking terms, FAQ */
+:root{
+  --paper:#F1ECE4; --sheet:#FAF8F4; --ink:#332C28; --oak:#8D7C6B; --terra:#947164;
+  --line:rgba(51,44,40,.14); --soft:rgba(148,113,100,.10); --btn-ink:#FAF8F4;
+  --display:'Jost','Noto Sans KR',system-ui,sans-serif;
+  --body:'Pretendard','Noto Sans KR',-apple-system,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#1F1B19; --sheet:#28231F; --ink:#EDE6DC; --oak:#B5A491; --terra:#C79C8C;
+  --line:rgba(237,230,220,.13); --soft:rgba(199,156,140,.12); --btn-ink:#1F1B19; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1F1B19; --sheet:#28231F; --ink:#EDE6DC; --oak:#B5A491; --terra:#C79C8C;
+  --line:rgba(237,230,220,.13); --soft:rgba(199,156,140,.12); --btn-ink:#1F1B19; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding-inline:16px;padding-block:48px 56px;display:flex;flex-direction:column;gap:40px}
+header{text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.wm{font-family:'Jost',sans-serif;font-weight:400;letter-spacing:.24em;padding-left:.24em;font-size:22px}
+.wm .gap{letter-spacing:.64em}
+.ko{font-size:11px;letter-spacing:.3em;padding-left:.3em;color:var(--oak)}
+.slogan{margin-top:14px;font-size:15px;font-weight:400;text-wrap:balance}
+.intro{font-size:13px;color:var(--oak);max-width:34ch;text-wrap:balance}
+h2{font-family:var(--display);font-weight:500;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--oak);margin:0 0 4px}
+h2 small{font-family:var(--body);letter-spacing:.02em;text-transform:none;font-size:13px;color:var(--ink);font-weight:400;display:block;margin-top:2px}
+section{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sheet{background:var(--sheet);border:1px solid var(--line)}
+p{margin:0}
+.note{font-size:12.5px;color:var(--oak)}
+
+/* inquiry */
+.ask{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ask a,.ask span.off{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:14px 10px;text-decoration:none;font-size:13.5px;font-weight:400;border:1px solid var(--ink);color:var(--ink);transition:background .2s,color .2s}
+.ask a.main{background:var(--ink);color:var(--btn-ink)}
+.ask a:hover{background:var(--terra);border-color:var(--terra);color:var(--btn-ink)}
+.ask small{font-family:'Jost',sans-serif;font-size:9.5px;letter-spacing:.24em;opacity:.7}
+.ask span.off{border-style:dashed;color:var(--oak);border-color:var(--oak)}
+a:focus-visible{outline:2px solid var(--terra);outline-offset:2px}
+
+/* products */
+.prod{padding:20px;display:flex;flex-direction:column;gap:10px}
+.prod .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.prod h3{margin:0;font-size:17px;font-weight:500}
+.prod .price{font-family:'Jost',sans-serif;font-size:19px;font-weight:400;font-variant-numeric:tabular-nums;white-space:nowrap}
+.prod .price em{font-family:var(--body);font-style:normal;font-size:12px;color:var(--oak);margin-left:2px}
+.prod .lead{font-size:13.5px}
+.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px;border-top:1px solid var(--line);padding-top:12px}
+.facts dt{color:var(--oak)}
+.facts dd{margin:0;min-width:0}
+.prod.jeju{border-color:var(--terra)}
+.tag{align-self:flex-start;font-size:11px;font-weight:500;color:var(--terra);background:var(--soft);padding:2px 9px;border-radius:999px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-top:1px solid var(--line);padding-top:12px}
+.split div{display:flex;flex-direction:column;gap:2px;font-size:13px}
+.split b{font-weight:500}
+.split .price{font-size:17px}
+
+/* retouch */
+.retouch{display:grid;grid-template-columns:1fr 1fr}
+.retouch div{padding:18px 18px 16px;display:flex;flex-direction:column;gap:4px}
+.retouch div+div{border-left:1px solid var(--line)}
+.retouch .n{font-family:'Jost',sans-serif;font-size:30px;line-height:1.1;font-variant-numeric:tabular-nums}
+.retouch .n small{font-family:var(--body);font-size:13px}
+.retouch b{font-weight:500;font-size:14px}
+.retouch p{font-size:12.5px;color:var(--oak)}
+
+/* tables */
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:10px 14px;border-top:1px solid var(--line);vertical-align:top}
+tr:first-child th,tr:first-child td{border-top:none}
+th{font-weight:500;white-space:nowrap;font-family:'Jost',var(--body);font-variant-numeric:tabular-nums}
+td.r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* timeline */
+.steps{list-style:none;margin:0;padding:6px 0}
+.steps li{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:10px 18px;font-size:13.5px}
+.steps li+li{border-top:1px solid var(--line)}
+.steps time{font-family:'Jost',sans-serif;color:var(--terra);font-variant-numeric:tabular-nums;font-size:13px;padding-top:1px}
+.steps span small{display:block;color:var(--oak);font-size:12px}
+
+/* faq */
+details{border-top:1px solid var(--line);padding:0 18px}
+details:first-child{border-top:none}
+summary{cursor:pointer;padding:14px 0;font-size:14px;font-weight:400;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:'Jost',sans-serif;color:var(--oak)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 16px;font-size:13px;color:var(--ink);opacity:.88}
+
+footer{text-align:center;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.35em;color:var(--oak);display:flex;flex-direction:column;gap:6px}
+@media (max-width:420px){
+  .retouch{grid-template-columns:1fr}
+  .retouch div+div{border-left:none;border-top:1px solid var(--line)}
+  .steps li{grid-template-columns:64px 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="wm" aria-label="Samwol Samil">Samwo<span class="gap">l</span>Samil</div>
+    <div class="ko">삼월삼일</div>
+    <p class="slogan">오래 곁에 두고 싶은 날을 기록합니다.</p>
+    <p class="intro">웨딩 스냅과 본식 스냅의 구성, 가격, 진행 순서를 한곳에 모았어요.</p>
+  </header>
+
+  <section aria-label="문의">
+    <div class="ask" id="ask"></div>
+    <p class="note" style="text-align:center">날짜와 장소, 원하시는 분위기를 함께 보내 주시면 일정부터 확인해 드려요.</p>
+  </section>
+
+  <section>
+    <h2>Wedding Snap<small>웨딩 스냅</small></h2>
+    <div class="sheet prod">
+      <div class="top"><h3>야외 웨딩 스냅</h3><span class="price">500,000<em>원</em></span></div>
+      <p class="lead">오후의 빛이 부드러운 시간에 3시간 동안 함께해요. 포즈를 맞추기보다 서로를 바라보다 웃음이 터지는 순간을 기다려요.</p>
+      <dl class="facts">
+        <dt>촬영</dt><dd>3시간, 야외 기본 (렌탈 스튜디오는 원하실 때)</dd>
+        <dt>원본</dt><dd>고해상도 원본 전체, 보통 1,500장 이상</dd>
+        <dt>보정</dt><dd>보정본 70장 (색감 보정 50장 + 인물보정 20장)</dd>
+        <dt>의상</dt><dd>두 벌을 추천해요</dd>
+      </dl>
+    </div>
+    <div class="sheet prod jeju">
+      <span class="tag">포트폴리오 기간 가격</span>
+      <div class="top"><h3>제주 웨딩 스냅</h3><span class="price">800,000<em>원</em></span></div>
+      <p class="lead">제주에서는 5시간을 넉넉히 써요. 바다와 오름, 숲을 옮겨 다니며 해 질 녘 빛까지 담아요.</p>
+      <dl class="facts">
+        <dt>촬영</dt><dd>5시간, 오후부터 일몰까지</dd>
+        <dt>원본</dt><dd>고해상도 원본 전체</dd>
+        <dt>보정</dt><dd>보정본 70장 (색감 보정 50장 + 인물보정 20장)</dd>
+        <dt>금액</dt><dd>촬영비 50만 원 + 제주 출장비 30만 원</dd>
+      </dl>
+      <p class="note">포트폴리오를 쌓는 동안 잠시 이 금액으로 받아요. 이후에는 달라질 수 있어요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Retouch<small>보정 70장은 이렇게 나뉘어요</small></h2>
+    <div class="sheet retouch">
+      <div><span class="n">50<small>장</small></span><b>색감 보정</b><p>따뜻한 필름 톤과 부드러운 흑백으로 빛과 색을 맞춰요. 컬러와 흑백은 7 대 3쯤으로 담겨요.</p></div>
+      <div><span class="n">20<small>장</small></span><b>인물보정</b><p>색감 보정에 더해 피부와 얼굴선까지 다듬어요.</p></div>
+    </div>
+    <p class="note">원본을 받으신 뒤 두 가지를 각각 따로 골라 주세요.</p>
+  </section>
+
+  <section>
+    <h2>Ceremony Snap<small>본식 스냅</small></h2>
+    <div class="sheet prod">
+      <div class="top"><h3>데이터형 본식 스냅</h3></div>
+      <p class="lead">신부대기실부터 원판 촬영까지 함께해요. 다시 찍을 수 없는 하루라 2인을 권해 드려요. 한 사람은 두 분을, 다른 한 사람은 하객과 장면을 담아요.</p>
+      <div class="split">
+        <div><b>1인 촬영</b><span class="price">500,000<em>원</em></span><span>원본 전체 + 보정본 40장</span></div>
+        <div><b>2인 촬영</b><span class="price">800,000<em>원</em></span><span>원본 전체 + 보정본 50장</span></div>
+      </div>
+      <p class="note">서브 작가가 찍은 사진도 제가 직접 골라 같은 톤으로 보정해요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Travel<small>출장비</small></h2>
+    <div class="sheet tbl">
+      <table>
+        <tr><th>0원</th><td>서울, 고양, 성남, 부천, 광명, 과천, 안양, 하남, 구리, 의정부, 남양주</td></tr>
+        <tr><th>5만 원</th><td>인천, 수원, 용인, 화성, 김포, 파주, 군포, 의왕, 시흥, 안산, 경기 광주</td></tr>
+        <tr><th>10만 원</th><td>평택, 안성, 이천, 여주, 양평, 가평, 포천, 동두천, 연천, 강원, 충청</td></tr>
+        <tr><th>25만 원</th><td>경상, 전라</td></tr>
+        <tr><th>30만 원</th><td>제주</td></tr>
+      </table>
+    </div>
+    <p class="note">본식 2인은 서브 작가 몫으로 수도권·강원·충청 5만 원, 경상·전라·제주 10만 원을 더해요. 서울에서 활동하고, 두 분이 원하는 곳 어디든 찾아가요.</p>
+  </section>
+
+  <section>
+    <h2>Delivery<small>사진 받는 날</small></h2>
+    <ol class="sheet steps">
+      <li><time>촬영일</time><span>함께하는 날<small>웨딩 스냅은 촬영 2주 전에 안내문을 보내 드려요</small></span></li>
+      <li><time>7일 안</time><span>원본 전체 전달<small>본식 스냅은 3일 안에 보내 드려요</small></span></li>
+      <li><time>14일 안</time><span>보정할 사진 고르기<small>원본을 받으신 날로부터 14일 안에 골라 주세요</small></span></li>
+      <li><time>30일 안</time><span>보정본 전달<small>고르신 날로부터 웨딩 30일, 본식 21일 안. 봄·가을에는 최대 10일 늦어질 수 있고, 늦어질 것 같으면 먼저 연락드려요</small></span></li>
+    </ol>
+    <p class="note">사진은 다운로드 링크로 전해 드리고, 링크는 30일 동안 열려 있어요. 보정 수정은 1회 들어 있어요.</p>
+  </section>
+
+  <section>
+    <h2>Booking<small>예약과 변경</small></h2>
+    <div class="sheet tbl">
+      <table>
+        <tr><th>계약금</th><td>촬영비의 20%로 날짜를 확정해요</td></tr>
+        <tr><th>잔금</th><td>촬영 7일 전까지</td></tr>
+        <tr><th>비·눈</th><td>촬영 2일 전 예보를 함께 보고, 날짜를 한 번 무료로 바꿀 수 있어요</td></tr>
+        <tr><th>날짜 변경</th><td>촬영 14일 전까지 한 번 무료예요</td></tr>
+      </table>
+    </div>
+    <div class="sheet tbl">
+      <table>
+        <tr><th>취소를 알린 날</th><td class="r">취소 수수료 (촬영비 기준)</td></tr>
+        <tr><td>촬영 30일 전까지</td><td class="r">10%</td></tr>
+        <tr><td>29일 전 ~ 8일 전</td><td class="r">20%</td></tr>
+        <tr><td>7일 전 ~ 2일 전</td><td class="r">50%</td></tr>
+        <tr><td>전날과 당일</td><td class="r">100%</td></tr>
+      </table>
+    </div>
+    <p class="note">잔금을 내기 전에 취소하시면 내신 계약금 안에서만 계산해요. 작가 사정으로 촬영하지 못하면 전액 돌려드려요. 자세한 조건은 계약서에 적어 드려요.</p>
+  </section>
+
+  <section>
+    <h2>Portfolio<small>게시에 동의해 주시면</small></h2>
+    <div class="sheet prod">
+      <p class="lead">웨딩 스냅에서 사진을 포트폴리오로 올려도 된다고 동의해 주시면, 촬영 날 즉석필름 20장(미니필름 10장, 와이드필름 10장)을 찍어 드리고 보정 수정을 1회 더 드려요.</p>
+      <p class="note">동의는 선택이에요. 올리지 않았으면 하는 사진은 고르실 때 미리 알려 주세요.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>FAQ<small>자주 묻는 질문</small></h2>
+    <div class="sheet">
+      <details><summary>색감 보정과 인물보정은 어떻게 다른가요?</summary><p>색감 보정은 필름 톤으로 빛과 색을 맞추는 보정이고, 인물보정은 거기에 피부와 얼굴선까지 다듬는 보정이에요. 두 가지를 원본에서 각각 따로 골라 주세요.</p></details>
+      <details><summary>원본은 모두 받을 수 있나요?</summary><p>네. 촬영한 고해상도 원본을 모두 드려요. 보통 1,500장 이상이에요.</p></details>
+      <details><summary>스튜디오에서도 찍을 수 있나요?</summary><p>네. 자연광이 좋은 렌탈 스튜디오 리스트를 드려요. 예약과 대관료는 두 분이 맡아 주세요.</p></details>
+      <details><summary>인화나 앨범도 되나요?</summary><p>지금은 사진 파일만 드려요. 받으신 사진은 인화와 청첩장, 모바일 청첩장에 자유롭게 쓰셔도 돼요.</p></details>
+      <details><summary>가격에 들어 있지 않은 것이 있나요?</summary><p>렌탈 스튜디오 대관료, 드레스와 헤어메이크업, 촬영 장소 입장료와 촬영 허가 비용, 출장비는 따로예요.</p></details>
+    </div>
+  </section>
+
+  <footer><span>SEOUL · WEDDING ARCHIVE</span><span>@samwolsamil</span></footer>
+</div>
+
+<script>
+/* 카카오톡 채널 주소가 정해지면 여기에 넣어요. 비워 두면 '준비 중'으로 보여요. */
+const KAKAO='';
+const IG='https://www.instagram.com/samwolsamil/';
+const ask=document.getElementById('ask');
+ask.innerHTML=(KAKAO
+  ?`<a class="main" href="${KAKAO}" target="_blank" rel="noopener">카카오톡 문의<small>KAKAO</small></a>`
+  :`<span class="off">카카오톡 채널 준비 중<small>KAKAO</small></span>`)
+ +`<a${KAKAO?'':' class="main"'} href="${IG}" target="_blank" rel="noopener">인스타그램 DM<small>INSTAGRAM</small></a>`;
+</script>
+</body>
+</html>
