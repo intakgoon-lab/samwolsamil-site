@@ -150,5 +150,11 @@ $('qrBtn').onclick=()=>{const b=$('qrBox'),on=b.classList.toggle('on');$('qrBtn'
 /* QR은 처음부터 펼쳐 둬요(10/2). qrcode 스크립트가 늦게 오면 로드 후 다시 그려요 */
 drawQR();if(typeof qrcode==='undefined')window.addEventListener('load',drawQR);
 </script>
+<script>
+/* 방문 통계(Cloudflare Web Analytics, 쿠키 없음). 토큰을 넣으면 samwolsamil.com에서만 켜져요. */
+(function(){var CF_TOKEN='';if(!CF_TOKEN||!/(^|\.)samwolsamil\.com$/.test(location.hostname))return;
+var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';
+s.setAttribute('data-cf-beacon',JSON.stringify({token:CF_TOKEN}));document.head.appendChild(s);})();
+</script>
 </body>
 </html>
