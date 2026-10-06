@@ -106,7 +106,7 @@ const P={
   phone:'+82 10 9963 4551',
   email:'hello@samwolsamil.com',
   instagram:'samwolsamil',
-  kakao:'',        // 카카오톡 채널 주소 (예: https://pf.kakao.com/_xxxx). 비워두면 버튼이 숨겨져요.
+  kakao:'https://pf.kakao.com/_HsZFX',   // 카카오톡 채널 삼월삼일 (10/7)
   booking:'https://samwolsamil.com/',      // 촬영 안내 페이지(가격·진행)
   cardUrl:'https://samwolsamil.com/card/'       // QR을 찍으면 이 명함이 열려요
 };
@@ -120,9 +120,9 @@ const I={
   plus:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 3v10M3 8h10"/></svg>'
 };
 const links=[
-  {t:'인스타그램',k:'INSTAGRAM',h:`https://www.instagram.com/${P.instagram}/`,main:true},
+  P.kakao&&{t:'카카오톡 문의',k:'KAKAO',h:P.kakao,main:true},
+  {t:'인스타그램',k:'INSTAGRAM',h:`https://www.instagram.com/${P.instagram}/`,main:!P.kakao},
   P.booking&&{t:'촬영 안내 · 가격',k:'GUIDE',h:P.booking},
-  P.kakao&&{t:'카카오톡 상담',k:'KAKAO',h:P.kakao},
   {t:'전화하기',k:'CALL',h:`tel:${P.phone.replace(/[^0-9+]/g,'')}`},
   {t:'이메일 보내기',k:'EMAIL',h:`mailto:${P.email}`}
 ].filter(Boolean);
